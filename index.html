@@ -3,12 +3,16 @@
 <head>
 	<title>Tarea</title>
 	<meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 	<style type="text/css">
 		body{
 			background:  #808b96 ;
+			font-size: 0.8rem;
 		}
 	</style>
 </head>
@@ -39,7 +43,7 @@
 		  		</div>
 		  	</div>
 		  	<div class="row">
-			  	<table class="table table-bordered">
+			  	<table class="table table-bordered" id="tbl_tipos">
 			  		<thead style="background:  #6e2c00; color: white;">
 			  			<tr>
 			  				<th>ID TECNOLOGIA</th>
@@ -54,19 +58,42 @@
 			  				<td>1</td>
 			  				<td>IOT Internet of Things</td>
 			  				<td>1</td>
-			  				<td>Actualmente el uso de internet de las cosas se ha ampliado incluso a uso domestico</td>
+			  				<td>Actualmente el uso de internet de las cosas se ha ampliado incluso a uso domestico como por ejemplo dispositivos electronicos como calefacción "inteligente" que permite un control automatico del clima dentro
+			  				del entorno
 			  				<td>
-			  					<img width="150px" height="150px" src="https://www.google.com.gt/url?sa=i&url=https%3A%2F%2Fwww.incibe-cert.es%2Fblog%2Fiot-protocolos-comunicacion-ataques-y-recomendaciones&psig=AOvVaw2VuQ1bpn4K6IdxIM14huae&ust=1628910717121000&source=images&cd=vfe&ved=0CAcQjRxqFwoTCMDDmruDrfICFQAAAAAdAAAAABAD">
+			  					<img width="50px" height="50px" src="https://hlassets.paessler.com/common/files/background-photos/iot-world.svg">
+			  				</td>
+			  			</tr>
+			  			<tr>
+			  				<td>2</td>
+			  				<td>Inteligencia Artificial (IA)</td>
+			  				<td>1</td>
+			  				<td>
+			  					Es uno quizá de los más interesantes ya que pretende la simulación de comportamientos humanos; su implementación se puede ver en conjunto con tecnologías con el machine learning en donde se "entrenan" ciertos algoritmos con fines especificos como por ejemplo el reconocimiento de objetos.
+			  				<td>
+			  					<img width="50px" height="50px" src="https://hardzone.es/app/uploads-hardzone.es/2020/09/Inteligencia-Artificial.jpg">
 			  				</td>
 			  			</tr>
 			  		</tbody>
 			  	</table>
 		  	</div>
+		  	<br>
 		  	<div class="row">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pC5Xc0zAFtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	  		
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/pC5Xc0zAFtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 		  	</div>
 		  </div>
 		</div>
 	</div>
 </body>
+<script type="text/javascript">	
+
+	$( document ).ready(function() {
+		$('#tbl_tipos').DataTable( {
+		    rowGroup: {
+		        dataSrc: 'group'
+		    }
+		} );
+	});
+
+</script>
 </html>
